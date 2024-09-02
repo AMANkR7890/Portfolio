@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    stages {
+       
+        stage('dev') {
+            steps {
+                echo 'development'
+                sh 'git clone  "https://github.com/AMANkR7890/Portfolio.git"'
+            }
+        }
+        
+        stage('QA') {
+            steps {
+                echo 'qa'
+            }
+        }
+        
+        stage('UAT') {
+            steps {
+                echo 'uat'
+            }
+        }
+        
+        stage('preprod') {
+            steps {
+                echo 'preproduction'
+            }
+        }
+        stage('prod') {
+            steps {
+                echo 'production'
+            }
+        }
+    }
+}
